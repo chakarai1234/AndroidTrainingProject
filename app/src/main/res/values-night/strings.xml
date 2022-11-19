@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="first_activity_name">First Activity</string>
+    <string name="next_activity_name">Next Activity</string>
+    <string name="second_activity_fragment_1_name">Second Activity Fragment 1</string>
+    <string name="go_back_name">Go Back</string>
+    <string name="go_to_fragment_1_button">Go to fragment 1</string>
+    <string name="age_hint_name">Age</string>
+    <string name="second_activity_fragment_2_name">Second Activity Fragment 2</string>
+</resources>
