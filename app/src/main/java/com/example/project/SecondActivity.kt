@@ -17,7 +17,7 @@ class SecondActivity : AppCompatActivity() {
     @Named("applicationName")
     lateinit var applicationName: String
     
-    lateinit var activitySecondBinding: ActivitySecondBinding
+    private lateinit var activitySecondBinding: ActivitySecondBinding
     
     @Inject
     @ApplicationContext

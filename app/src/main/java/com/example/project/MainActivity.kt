@@ -19,7 +19,7 @@ class MainActivity : AppCompatActivity() {
     @Named("applicationName")
     lateinit var applicationName: String
     
-    lateinit var mainActivityBinding: ActivityMainBinding
+    private lateinit var mainActivityBinding: ActivityMainBinding
     
     @Inject
     @ApplicationContext
