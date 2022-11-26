@@ -12,31 +12,31 @@
         android:layout_height="wrap_content"
         android:text="@string/second_activity_fragment_1_name"
         android:textSize="24sp"
-        app:layout_constraintBottom_toTopOf="@id/etNameBorder"
+        app:layout_constraintBottom_toTopOf="@id/etAgeBorder"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/etNameBorder"
-        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-        android:layout_width="250dp"
-        android:layout_height="wrap_content"
-        android:clickable="true"
-        android:focusable="true"
-        android:hint="@string/name_edit_text"
-        app:layout_constraintBottom_toTopOf="@id/etAgeBorder"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/name">
+    <!--    <com.google.android.material.textfield.TextInputLayout-->
+    <!--        android:id="@+id/etNameBorder"-->
+    <!--        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"-->
+    <!--        android:layout_width="250dp"-->
+    <!--        android:layout_height="wrap_content"-->
+    <!--        android:clickable="true"-->
+    <!--        android:focusable="true"-->
+    <!--        android:hint="@string/name_edit_text"-->
+    <!--        app:layout_constraintBottom_toTopOf="@id/etAgeBorder"-->
+    <!--        app:layout_constraintEnd_toEndOf="parent"-->
+    <!--        app:layout_constraintStart_toStartOf="parent"-->
+    <!--        app:layout_constraintTop_toBottomOf="@id/name">-->
 
-        <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/etName"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:maxLines="1" />
+    <!--        <com.google.android.material.textfield.TextInputEditText-->
+    <!--            android:id="@+id/etName"-->
+    <!--            android:layout_width="match_parent"-->
+    <!--            android:layout_height="wrap_content"-->
+    <!--            android:maxLines="1" />-->
 
-    </com.google.android.material.textfield.TextInputLayout>
+    <!--    </com.google.android.material.textfield.TextInputLayout>-->
 
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/etAgeBorder"
@@ -49,7 +49,7 @@
         app:layout_constraintBottom_toTopOf="@id/goBack"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/etNameBorder">
+        app:layout_constraintTop_toBottomOf="@id/name">
 
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/etAge"

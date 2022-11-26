@@ -25,11 +25,14 @@
             app:destination="@id/activity2Fragment1"
             app:enterAnim="@animator/nav_default_pop_enter_anim"
             app:exitAnim="@animator/nav_default_exit_anim" />
+        <!--        <argument-->
+        <!--            android:name="name"-->
+        <!--            app:argType="string" />-->
+        <!--        <argument-->
+        <!--            android:name="age"-->
+        <!--            app:argType="string" />-->
         <argument
-            android:name="name"
-            app:argType="string" />
-        <argument
-            android:name="age"
-            app:argType="string" />
+            android:name="myData"
+            app:argType="com.example.project.models.MyData" />
     </fragment>
 </navigation>

@@ -13,6 +13,6 @@
     <string name="name_edit_text">Name</string>
     <string name="go_back_name">Go Back</string>
     <string name="go_to_fragment_1_button">Go to fragment 1</string>
-    <string name="age_hint_name">Age</string>
+    <string name="age_hint_name">Enter Index</string>
     <string name="second_activity_fragment_2_name">Second Activity Fragment 2</string>
 </resources>
