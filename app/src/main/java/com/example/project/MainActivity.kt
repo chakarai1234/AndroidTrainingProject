@@ -1,6 +1,5 @@
 package com.example.project
 
-import android.annotation.SuppressLint
 import android.content.Context
 import android.content.Intent
 import android.os.Bundle
@@ -10,7 +9,6 @@ import androidx.activity.viewModels
 import androidx.appcompat.app.AppCompatActivity
 import com.example.project.databinding.ActivityMainBinding
 import com.example.project.viewmodels.MainViewModel
-import com.google.android.material.color.DynamicColors
 import dagger.hilt.android.AndroidEntryPoint
 import dagger.hilt.android.qualifiers.ApplicationContext
 import javax.inject.Inject
@@ -31,7 +29,6 @@ class MainActivity : AppCompatActivity() {
     
     private val mainViewModel: MainViewModel by viewModels()
     
-    @SuppressLint("PrivateResource")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         Log.i(applicationName, "onCreate")
@@ -41,8 +38,7 @@ class MainActivity : AppCompatActivity() {
         window.setFlags(
             WindowManager.LayoutParams.FLAG_SECURE, WindowManager.LayoutParams.FLAG_SECURE
         )
-        
-        DynamicColors.applyToActivitiesIfAvailable(application)
+
 
 //        val activityName = getString(R.string.first_activity_name) + ": v_" + BuildConfig.VERSION_NAME + "." + BuildConfig.VERSION_CODE
         
@@ -65,35 +61,35 @@ class MainActivity : AppCompatActivity() {
             }
         }
     }
-    
-    override fun onPause() {
-        super.onPause()
-        Log.i(applicationName, "onPause")
-    }
-    
-    override fun onResume() {
-        super.onResume()
-        Log.i(applicationName, "onResume")
-    }
-    
-    override fun onStop() {
-        super.onStop()
-        Log.i(applicationName, "onStop")
-    }
-    
-    override fun onStart() {
-        super.onStart()
-        Log.i(applicationName, "onStart")
-    }
-    
-    override fun onRestart() {
-        super.onRestart()
-        Log.i(applicationName, "onRestart")
-    }
-    
-    override fun onDestroy() {
-        super.onDestroy()
-        Log.i(applicationName, "onDestroy")
-    }
-    
+//
+//    override fun onPause() {
+//        super.onPause()
+//        Log.i(applicationName, "onPause")
+//    }
+//
+//    override fun onResume() {
+//        super.onResume()
+//        Log.i(applicationName, "onResume")
+//    }
+//
+//    override fun onStop() {
+//        super.onStop()
+//        Log.i(applicationName, "onStop")
+//    }
+//
+//    override fun onStart() {
+//        super.onStart()
+//        Log.i(applicationName, "onStart")
+//    }
+//
+//    override fun onRestart() {
+//        super.onRestart()
+//        Log.i(applicationName, "onRestart")
+//    }
+//
+//    override fun onDestroy() {
+//        super.onDestroy()
+//        Log.i(applicationName, "onDestroy")
+//    }
+//
 }

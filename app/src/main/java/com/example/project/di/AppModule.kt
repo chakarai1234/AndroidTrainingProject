@@ -2,7 +2,7 @@ package com.example.project.di
 
 import android.content.Context
 import com.example.project.BuildConfig
-import com.example.project.api.jsonApi
+import com.example.project.api.JsonApi
 import com.google.gson.Gson
 import com.google.gson.GsonBuilder
 import dagger.Module
@@ -46,29 +46,26 @@ object AppModule {
         loggingInterceptor.setLevel(HttpLoggingInterceptor.Level.BODY)
         
         val requestInterceptor = Interceptor {
-            
             val url = it.request().url.newBuilder().build()
-            
             val request = it.request().newBuilder().url(url).build()
-            
             return@Interceptor it.proceed(request)
         }
         
         OkHttpClient.Builder().addInterceptor(requestInterceptor).addInterceptor(loggingInterceptor).readTimeout(Duration.ofMinutes(1))
             .build()
+        
     } else {
         OkHttpClient.Builder().readTimeout(Duration.ofMinutes(1)).build()
     }
     
     @Provides
     @Singleton
-    fun provideRetrofit(baseUrl: String, gson: Gson, client: OkHttpClient): Retrofit = Retrofit.Builder().baseUrl(baseUrl).client(client)
-        .baseUrl(baseUrl).addConverterFactory(GsonConverterFactory.create(gson))
-        .build()
+    fun provideRetrofit(baseUrl: String, gson: Gson, client: OkHttpClient): Retrofit =
+        Retrofit.Builder().baseUrl(baseUrl).client(client).baseUrl(baseUrl).addConverterFactory(GsonConverterFactory.create(gson)).build()
     
     
     @Provides
     @Singleton
-    fun provideJsonApi(retrofit: Retrofit): jsonApi = retrofit.create(jsonApi::class.java)
+    fun provideJsonApi(retrofit: Retrofit): JsonApi = retrofit.create(JsonApi::class.java)
     
 }
